@@ -1,90 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>B500 CONCEPTS</title>
-  <link rel="icon" href="B500_Concepts.jpg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exhibition Stall Design & Build</title>
+  <meta name="description" content="Custom exhibition stall design and build services." />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/index.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
-    body, html {
-      height: 100%;
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .container {
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* ✅ Make image circular */
-    .container img {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-    }
-
-    .loader {
-      border: 6px solid rgba(255, 255, 255, 0.3);
-      border-top: 6px solid white;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-      margin: auto;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-@media (max-width: 600px) {
-  .container img {
-    width: 150px;
-    height: 150px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-}
-
-  </style>
 </head>
 <body>
-  <div class="container">
-    <img src="B500_Concepts.jpg" alt="Company Logo" />
-    <h1>🚧 Under Construction</h1>
-    <p>We're working on website.<br>Please check back soon!</p>
-    <div class="loader"></div>
-  </div>
+  <!-- Page Header with Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/img/logo-img/B500_logo-removebg-preview2.png" alt="Logo" />
+        <div class="logo-text-group">
+          <span class="logo-text">B500 CONCEPTS</span>
+          <span class="logo-tagline">EVENTS | EXHIBITION | INTERIOR</span>
+        </div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/services.html">Services</a>
+        <a href="pages/contact.html">Contact</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Spacer to avoid content being hidden behind the fixed navbar -->
+  <div style="height: 70px;"></div>
+
+  <!-- Hero Section -->
+  <section class="hero animate-on-scroll" id="hero">
+    <h1>We Bring Your Exhibition Vision to Life</h1>
+    <p>Custom-designed stalls that captivate, engage, and convert.</p>
+    <!-- <button class="btn-primary" type="button" onclick="window.location.href='#'">
+      View Our Portfolio
+    </button> -->
+
+    <!-- Testimonials inside Hero -->
+    <!-- <section class="testimonials hero-testimonials-bg animate-on-scroll" aria-label="Client Testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-wrapper">
+        <blockquote>
+          The stall they designed doubled our visitor traffic. Excellent team!
+          <cite>– Client Name</cite>
+        </blockquote>
+      </div>
+    </section> -->
+  </section>
+
+  <!-- Services Section -->
+  <section class="services container animate-on-scroll" aria-label="Our Services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card" tabindex="0">
+        <h3>Stall Design</h3>
+        <p>Conceptual design, 3D modeling, brand integration</p>
+      </div>
+      <div class="service-card" tabindex="0">
+        <h3>Stall Building</h3>
+        <p>On-site setup, logistics coordination, and dismantling — hassle-free execution.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio container animate-on-scroll" aria-label="Featured Projects">
+    <h2>Featured Projects</h2>
+    <div class="portfolio-grid">
+      <button class="portfolio-card" type="button" >
+        <img src="assets/img/index-img/portfolio-img/pro1.jpg" alt="Modern Tech Expo Stall" />
+        <div class="overlay">Modern Tech Expo Stall</div>
+      </button>
+      <button class="portfolio-card" type="button" >
+        <img src="assets/img/index-img/portfolio-img/pro2.jpg" alt="Creative Branding Booth" />
+        <div class="overlay">Creative Branding Booth</div>
+      </button>
+      <button class="portfolio-card" type="button" >
+        <img src="assets/img/index-img/portfolio-img/pro3.jpg" alt="International Trade Fair Stall" />
+        <div class="overlay">International Trade Fair</div>
+      </button>
+      <button class="portfolio-card" type="button" >
+        <img src="assets/img/index-img/portfolio-img/pro4.jpg" alt="Eco-Friendly Pavilion" />
+        <div class="overlay">Eco-Friendly Pavilion</div>
+      </button>
+      <button class="portfolio-card" type="button" >
+        <img src="assets/img/index-img/portfolio-img/pro5.jpg" alt="Luxury Product Display Booth" />
+        <div class="overlay">Luxury Product Display Booth</div>
+      </button>
+      <button class="portfolio-card" type="button" >
+        <img src="assets/img/index-img/portfolio-img/pro6.jpg" alt="Minimalist Exhibition Space" />
+        <div class="overlay">Minimalist Exhibition Space</div>
+      </button>
+    </div>
+    <div class="image-disclaimer">
+      <p>* Images are for illustrative purposes only.</p>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why container animate-on-scroll" aria-label="Why Choose Us">
+    <h2>Why Choose Us</h2>
+    <div class="why-list">
+      <div class="why-item">🧠 Creative & Custom Designs</div>
+      <div class="why-item">🛠️ End-to-End Execution</div>
+      <div class="why-item">⏱️ On-Time Delivery</div>
+      <div class="why-item">🌍 Pan-India & International Reach</div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="call-to-action animate-on-scroll">
+    <h2>Ready to Elevate Your Presence?</h2>
+    <p>Let's Build Something Great Together.</p>
+    <p>&nbsp;</p>
+    <button class="btn-secondary" type="button" onclick="window.location.href='mailto:contact@yourcompany.com'">Contact Us</button>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>B500 CONCEPTS</h2>
+        <p>Crafting elegant designing experiences.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/services.html">Services</a></li>
+          
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:contact@b500concepts.com">contact@b500concepts.com</a></p>
+        <p>Phone: <a href="tel:+919953997777">+91 9953997777</a></p>
+      </div>
+
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2018 B500 Concepts. All rights reserved.</p>
+    </div>
+
+    </div>
+
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/index.js"></script>
+
 </body>
 </html>
