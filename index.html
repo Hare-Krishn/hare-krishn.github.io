@@ -1,179 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Exhibition Stall Design & Build</title>
-  <link rel="icon" href="assets/img/logo-img/B500_logo.jpg" type="image/svg+xml">
-  <meta name="description" content="Custom exhibition stall design and build services." />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-  <link href="assets/css/index.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <head>
+    <!-- Character encoding and responsive design -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-</head>
-<body>
-  <!-- Page Header with Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="assets/img/logo-img/B500_logo-removebg-preview2.png" alt="Logo" />
-        <div class="logo-text-group">
-          <span class="logo-text">B500 CONCEPTS</span>
-          <span class="logo-tagline">EVENTS | EXHIBITION | INTERIOR</span>
+    <!-- Page Title and Description for SEO -->
+    <title>B500 Concepts Exhibition Stall Design & Build</title>
+    <meta
+      name="description"
+      content="Custom exhibition stall design and build services."
+    />
+
+    <!-- Favicon -->
+	<link rel="manifest" href="/manifest.json">
+    <link
+      rel="icon"
+      href="assets/img/logo-img/B500_logo-removebg-preview2.png"
+      type="image/png"
+    />
+
+    <!-- Google Fonts for consistent typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS Stylesheets -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/index.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome for social media icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    
+    
+    <!-- ============================ -->
+    <!-- HEADER / NAVIGATION SECTION -->
+    <!-- ============================ -->
+    <header>
+      <nav class="navbar">
+        <!-- Logo section with image and tagline -->
+        <div class="logo">
+          <img
+            src="assets/img/logo-img/B500_logo-removebg-preview2.png"
+            alt="B500 Concepts Logo"
+          />
+          <div class="logo-text-group">
+            <span class="logo-text">B500 CONCEPTS</span>
+            <span class="logo-tagline">EVENTS | EXHIBITION | INTERIOR</span>
+          </div>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="about/index.html">About</a>
+          <a href="services/index.html">Services</a>
+          <a href="contact/index.html">Contact</a>
+        </div>
+
+        <!-- Hamburger icon for mobile menu -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Spacer div to prevent content from being hidden behind fixed navbar -->
+    <div class="spacer"></div>
+
+    <!-- ============== -->
+    <!-- HERO SECTION -->
+    <!-- ============== -->
+    <section class="hero" id="hero">
+      <h1>We Bring Your Exhibition Vision to Life</h1>
+      <p>Custom-designed stalls that captivate, engage, and convert.</p>
+    </section>
+
+    <!-- ======================== -->
+    <!-- SERVICES SECTION -->
+    <!-- ======================== -->
+    <section class="services container" aria-label="Our Services">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <!-- Individual service cards -->
+        <div class="service-card" tabindex="0">
+          <h3>Stall Design</h3>
+          <p>Conceptual design, 3D modeling, brand integration</p>
+        </div>
+        <div class="service-card" tabindex="0">
+          <h3>Stall Building</h3>
+          <p>
+            On-site setup, logistics coordination, and dismantling — hassle-free
+            execution.
+          </p>
         </div>
       </div>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="pages/about.html">About</a>
-        <a href="pages/services.html">Services</a>
-        <a href="pages/contact.html">Contact</a>
-      </div>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
-  
-  <!-- Spacer to avoid content being hidden behind the fixed navbar -->
-  <div style="height: 70px;"></div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero animate-on-scroll" id="hero">
-    <h1>We Bring Your Exhibition Vision to Life</h1>
-    <p>Custom-designed stalls that captivate, engage, and convert.</p>
-    <!-- <button class="btn-primary" type="button" onclick="window.location.href='#'">
-      View Our Portfolio
-    </button> -->
+    <!-- ============================ -->
+    <!-- PORTFOLIO / PROJECTS SECTION -->
+    <!-- ============================ -->
+    <!-- PROJECT SLIDER SECTION -->
+    <section id="portfolio" class="portfolio container" aria-label="Featured Projects">
+      <h2>Featured Projects</h2>
 
-    <!-- Testimonials inside Hero -->
-    <!-- <section class="testimonials hero-testimonials-bg animate-on-scroll" aria-label="Client Testimonials">
-      <h2>What Our Clients Say</h2>
-      <div class="testimonial-wrapper">
-        <blockquote>
-          The stall they designed doubled our visitor traffic. Excellent team!
-          <cite>– Client Name</cite>
-        </blockquote>
-      </div>
-    </section> -->
-  </section>
+      <div class="slider-wrapper">
+        <button class="nav-btn prev-btn" aria-label="Previous">&#10094;</button>
 
-  <!-- Services Section -->
-  <section class="services container animate-on-scroll" aria-label="Our Services">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card" tabindex="0">
-        <h3>Stall Design</h3>
-        <p>Conceptual design, 3D modeling, brand integration</p>
-      </div>
-      <div class="service-card" tabindex="0">
-        <h3>Stall Building</h3>
-        <p>On-site setup, logistics coordination, and dismantling — hassle-free execution.</p>
-      </div>
-    </div>
-  </section>
+        <div class="slider" id="projectSlider">
+          <div class="slide-card"><img src="assets/img/index-portfolio1.jpg" alt="Modern Tech Expo Stall" /><div class="caption">Modern Tech Expo Stall</div></div>
+          <div class="slide-card"><img src="assets/img/index-portfolio2.jpg" alt="Creative Branding Booth" /><div class="caption">Creative Branding Booth</div></div>
+          <div class="slide-card"><img src="assets/img/index-portfolio3.jpg" alt="International Trade Fair Stall" /><div class="caption">International Trade Fair</div></div>
+          <div class="slide-card"><img src="assets/img/index-portfolio4.jpg" alt="Eco-Friendly Pavilion" /><div class="caption">Eco-Friendly Pavilion</div></div>
+          <div class="slide-card"><img src="assets/img/index-portfolio5.jpg" alt="Luxury Product Display Booth" /><div class="caption">Luxury Product Display Booth</div></div>
+          <div class="slide-card"><img src="assets/img/index-portfolio6.jpg" alt="Minimalist Exhibition Space" /><div class="caption">Minimalist Exhibition Space</div></div>
+          <div class="slide-card"><img src="assets/img/index-portfolio7.jpg" alt="Stall Framework in Progress" /><div class="caption">Stall Framework in Progress</div></div>
+	<div class="slide-card"><img src="assets/img/index-portfolio11.jpg" alt="Completed Tech Expo Stall" /><div class="caption">Completed Tech Expo Stall</div></div>
+		<div class="slide-card"><img src="assets/img/index-portfolio16.jpg" alt="3D Render - Premium Booth" /><div class="caption">3D Render - Premium Booth</div></div>
+	<div class="slide-card"><img src="assets/img/index-portfolio8.jpg" alt="Lighting and Electrical Setup" /><div class="caption">Lighting and Electrical Setup</div></div>
+<div class="slide-card"><img src="assets/img/index-portfolio12.jpg" alt="Luxury Product Booth Ready" /><div class="caption">Luxury Product Booth Ready</div></div>
+	<div class="slide-card"><img src="assets/img/index-portfolio17.jpg" alt="Concept Sketch - Branding Wall" /><div class="caption">Concept Sketch - Branding Wall</div></div>
+	<div class="slide-card"><img src="assets/img/index-portfolio9.jpg" alt="Team Assembling Booth Panels" /><div class="caption">Team Assembling Booth Panels</div></div>
+	<div class="slide-card"><img src="assets/img/index-portfolio13.jpg" alt="Live Event Booth Setup" /><div class="caption">Live Event Booth Setup</div></div>
+	<div class="slide-card"><img src="assets/img/index-portfolio18.jpg" alt="Layout Plan - Open Space Design" /><div class="caption">Layout Plan - Open Space Design</div></div>
+	<div class="slide-card"><img src="assets/img/index-portfolio14.jpg" alt="Functional Demo Area" /><div class="caption">Functional Demo Area</div></div>
+	<div class="slide-card"><img src="assets/img/index-portfolio19.jpg" alt="Visual Proposal - Modular Booth" /><div class="caption">Visual Proposal - Modular Booth</div></div>
+	<div class="slide-card"><img src="assets/img/index-portfolio15.jpg" alt="Client Ready Booth View" /><div class="caption">Client Ready Booth View</div></div>
+	<div class="slide-card"><img src="assets/img/index-portfolio20.jpg" alt="Render - Interactive Display Concept" /><div class="caption">Render - Interactive Display Concept</div></div>
+	
+<div class="slide-card"><img src="assets/img/index-portfolio10.jpg" alt="Pre-Event Mockup Build" /><div class="caption">Pre-Event Mockup Build</div></div>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio container animate-on-scroll" aria-label="Featured Projects">
-    <h2>Featured Projects</h2>
-    <div class="portfolio-grid">
-      <button class="portfolio-card" type="button" >
-        <img src="assets/img/index-img/portfolio-img/pro1.jpg" alt="Modern Tech Expo Stall" />
-        <div class="overlay">Modern Tech Expo Stall</div>
+	
+	
+	<div class="slide-card"><img src="assets/img/index-portfolio21.jpg" alt="High-End Finish Proposal" /><div class="caption">High-End Finish Proposal</div></div>
+
+        </div>
+
+        <button class="nav-btn next-btn" aria-label="Next">&#10095;</button>
+      </div>
+
+      <!-- <div class="image-disclaimer">
+        <p>* Images are for illustrative purposes only.</p>
+      </div> -->
+    </section>
+
+
+
+
+
+    <!-- ========================== -->
+    <!-- WHY CHOOSE US SECTION -->
+    <!-- ========================== -->
+    <section class="why container" aria-label="Why Choose Us">
+      <h2>Why Choose Us</h2>
+      <div class="why-list">
+        <div class="why-item">🧠 Creative & Custom Designs</div>
+        <div class="why-item">🛠️ End-to-End Execution</div>
+        <div class="why-item">⏱️ On-Time Delivery</div>
+        <div class="why-item">🌍 Pan-India & International Reach</div>
+      </div>
+    </section>
+
+    <!-- ====================== -->
+    <!-- CALL TO ACTION SECTION -->
+    <!-- ====================== -->
+    <section class="call-to-action">
+      <h2>Ready to Elevate Your Presence?</h2>
+      <p>Let's Build Something Great Together.</p>
+      <p>&nbsp;</p>
+      <button
+        class="btn-secondary"
+        type="button"
+        onclick="window.location.href='contact/index.html'"
+      >
+        Contact Us
       </button>
-      <button class="portfolio-card" type="button" >
-        <img src="assets/img/index-img/portfolio-img/pro2.jpg" alt="Creative Branding Booth" />
-        <div class="overlay">Creative Branding Booth</div>
-      </button>
-      <button class="portfolio-card" type="button" >
-        <img src="assets/img/index-img/portfolio-img/pro3.jpg" alt="International Trade Fair Stall" />
-        <div class="overlay">International Trade Fair</div>
-      </button>
-      <button class="portfolio-card" type="button" >
-        <img src="assets/img/index-img/portfolio-img/pro4.jpg" alt="Eco-Friendly Pavilion" />
-        <div class="overlay">Eco-Friendly Pavilion</div>
-      </button>
-      <button class="portfolio-card" type="button" >
-        <img src="assets/img/index-img/portfolio-img/pro5.jpg" alt="Luxury Product Display Booth" />
-        <div class="overlay">Luxury Product Display Booth</div>
-      </button>
-      <button class="portfolio-card" type="button" >
-        <img src="assets/img/index-img/portfolio-img/pro6.jpg" alt="Minimalist Exhibition Space" />
-        <div class="overlay">Minimalist Exhibition Space</div>
-      </button>
-    </div>
-    <div class="image-disclaimer">
-      <p>* Images are for illustrative purposes only.</p>
-  </section>
+    </section>
 
-  <!-- Why Choose Us Section -->
-  <section class="why container animate-on-scroll" aria-label="Why Choose Us">
-    <h2>Why Choose Us</h2>
-    <div class="why-list">
-      <div class="why-item">🧠 Creative & Custom Designs</div>
-      <div class="why-item">🛠️ End-to-End Execution</div>
-      <div class="why-item">⏱️ On-Time Delivery</div>
-      <div class="why-item">🌍 Pan-India & International Reach</div>
-    </div>
-  </section>
+    <!-- =============== -->
+    <!-- FOOTER SECTION -->
+    <!-- =============== -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Branding / tagline -->
+        <div class="footer-brand">
+          <h2>B500 CONCEPTS</h2>
+          <p>Crafting elegant designing experiences.</p>
+        </div>
 
-  <!-- Call To Action -->
-  <section class="call-to-action animate-on-scroll">
-    <h2>Ready to Elevate Your Presence?</h2>
-    <p>Let's Build Something Great Together.</p>
-    <p>&nbsp;</p>
-    <button class="btn-secondary" type="button" onclick="window.location.href='pages/contact.html'">Contact Us</button>
-  </section>
+        <!-- Quick navigation links -->
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about/index.html">About</a></li>
+            <li><a href="services/index.html">Services</a></li>
+            <li><a href="contact/index.html">Contact</a></li>
+          </ul>
+        </div>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <h2>B500 CONCEPTS</h2>
-        <p>Crafting elegant designing experiences.</p>
-      </div>
+        <!-- Contact information -->
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            Email:
+            <a href="mailto:contact@b500concepts.com"
+              >contact@b500concepts.com</a
+            >
+          </p>
+          <p>Phone: <a href="tel:+919953997777">+91 9953997777</a></p>
+          <p><a href="tel:+91 120 4025283">+91 120 4025283</a></p>
+        </div>
 
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="pages/about.html">About</a></li>
-          <li><a href="pages/services.html">Services</a></li>
-          
-          <li><a href="pages/contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:contact@b500concepts.com">contact@b500concepts.com</a></p>
-        <p>Phone: <a href="tel:+919953997777">+91 9953997777</a></p>
-      </div>
-
-      <div class="footer-social">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Social media links -->
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
       </div>
+
+      <!-- Bottom copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2018–2025 B500 Concepts. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- ======================= -->
+    <!-- JAVASCRIPT FILES -->
+    <!-- ======================= -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/index.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(() => console.log('✅ Service Worker registered'))
+      .catch(error => console.error('❌ Service Worker registration failed:', error));
+  }
+</script>
+
+
+    <!-- Circular Scroll Progress Indicator -->
+    <div id="scroll-indicator-container">
+      <svg id="scroll-indicator" viewBox="0 0 36 36">
+        <path
+          class="bg"
+          d="M18 2.0845
+             a 15.9155 15.9155 0 0 1 0 31.831
+             a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <path
+          class="progress"
+          stroke-dasharray="0, 100"
+          d="M18 2.0845
+             a 15.9155 15.9155 0 0 1 0 31.831
+             a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+      </svg>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2018 B500 Concepts. All rights reserved.</p>
-    </div>
 
-    </div>
-
-  </footer>
-
-  <!-- JavaScript Files -->
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/index.js"></script>
-
-</body>
+  </body>
 </html>
