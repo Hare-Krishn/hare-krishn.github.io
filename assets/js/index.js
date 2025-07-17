@@ -76,7 +76,7 @@ function goToPrev() {
 function startAutoplay() {
   autoplayInterval = setInterval(() => {
     if (!userInteracting) goToNext();
-  }, 2000);
+  }, 1500);
 }
 
 function pauseAutoplayTemporarily() {
