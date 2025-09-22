@@ -1,5 +1,8 @@
+
+
 // Hamburger menu toggle
 document.addEventListener("DOMContentLoaded", () => {
+  
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.getElementById("navLinks");
 
