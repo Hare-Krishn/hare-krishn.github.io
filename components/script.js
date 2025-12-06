@@ -1,4 +1,4 @@
-// assets/js/script.js
+// components/script.js
 (function () {
   // Prevent duplicate initialization
   if (window.__B500_SCRIPT_INITIALIZED) return;
