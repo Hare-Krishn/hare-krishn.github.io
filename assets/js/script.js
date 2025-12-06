@@ -1,73 +1,70 @@
+// assets/js/script.js
+(function () {
+  // Prevent duplicate initialization
+  if (window.__B500_SCRIPT_INITIALIZED) return;
+  window.__B500_SCRIPT_INITIALIZED = true;
 
+  // ===========================
+  // HAMBURGER MENU LOGIC
+  // ===========================
+  function toggleNav() {
+    const navLinks = document.getElementById('navLinks');
+    const hamburger = document.querySelector('.hamburger');
+    if (!navLinks || !hamburger) return;
 
-// Hamburger menu toggle
-document.addEventListener("DOMContentLoaded", () => {
-  
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle('show');
+    hamburger.classList.toggle('open');
+  }
 
-  if (hamburger && navLinks) {
-    // Toggle menu when hamburger is clicked
-    hamburger.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent click from bubbling to document
-      navLinks.classList.toggle("show");
-    });
-
-    // Close menu when clicking outside of hamburger or menu
-    document.addEventListener("click", (e) => {
-      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        navLinks.classList.remove("show");
-      }
-    });
-
-    // Prevent clicks inside the menu from bubbling up
-    navLinks.addEventListener("click", (e) => {
+  // Delegated click events
+  document.addEventListener('click', function (e) {
+    // Hamburger clicked
+    const hamburgerEl = e.target.closest && e.target.closest('.hamburger');
+    if (hamburgerEl) {
       e.stopPropagation();
-    });
-  }
+      toggleNav();
+      return;
+    }
 
-  // Scroll progress indicator
-  const progressPath = document.querySelector('#scroll-indicator .progress');
-  const indicatorContainer = document.getElementById('scroll-indicator-container');
-  const footer = document.querySelector('footer');
+    // Nav link clicked
+    const navLink = e.target.closest && e.target.closest('.nav-links a');
+    if (navLink) {
+      const navLinks = document.getElementById('navLinks');
+      const hamburger = document.querySelector('.hamburger');
 
-  if (progressPath && indicatorContainer && footer) {
-    const updateScrollProgress = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      progressPath.setAttribute('stroke-dasharray', `${scrollPercent}, 100`);
-    };
+      if (navLinks) navLinks.classList.remove('show');
+      if (hamburger) hamburger.classList.remove('open');
 
-    const checkFooterVisibility = () => {
-      const footerRect = footer.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+      return;
+    }
 
-      if (footerRect.top < windowHeight) {
-        // Footer is visible
-        indicatorContainer.classList.add('fade-out');
-      } else {
-        // Footer not visible
-        indicatorContainer.classList.remove('fade-out');
+    // Click outside nav
+    const navLinks = document.getElementById('navLinks');
+    const hamburger = document.querySelector('.hamburger');
+
+    if (navLinks && navLinks.classList.contains('show')) {
+      const clickedInsideNav = navLinks.contains(e.target);
+      const clickedHamburger = hamburger && hamburger.contains(e.target);
+
+      if (!clickedInsideNav && !clickedHamburger) {
+        navLinks.classList.remove('show');
+        if (hamburger) hamburger.classList.remove('open');
       }
-    };
+    }
+  });
 
-    // Initial state
-    updateScrollProgress();
-    checkFooterVisibility();
+  // Keyboard toggle
+  document.addEventListener('keydown', function (e) {
+    const active = document.activeElement;
 
-    // Update on scroll
-    window.addEventListener('scroll', () => {
-      updateScrollProgress();
-      checkFooterVisibility();
-    });
-  }
+    if (active && active.classList && active.classList.contains('hamburger')) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleNav();
+      }
+    }
 
-  // Disable right-click on entire page
-  document.addEventListener("contextmenu", event => event.preventDefault());
-
-  // Disable key shortcuts to open DevTools
-  document.addEventListener("keydown", function (e) {
+    // Disable devtools shortcuts
     if (
       e.key === "F12" ||
       (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
@@ -76,4 +73,59 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
     }
   });
-});
+
+  // Disable right-click
+  document.addEventListener("contextmenu", event => event.preventDefault());
+
+  // ===========================
+  // SERVICE WORKER REGISTRATION
+  // ===========================
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js")
+      .then(() => console.log("✅ Service Worker registered"))
+      .catch(error => console.error("❌ Service Worker registration failed:", error));
+  }
+
+  // ===========================
+  // CURSOR EFFECT (Dynamic Import)
+  // ===========================
+// after you create the cursor
+import("https://unpkg.com/cursor-effects@latest/dist/esm.js")
+  .then(module => {
+    const { followingDotCursor } = module;
+    const cursorInstance = new followingDotCursor({ color: "#8cbc46" });
+
+    // Move to bottom-right. Adjust offset to keep dot inside viewport.
+    const offset = 24; // pixels from edges (tweak as needed)
+    const targetX = Math.max(window.innerWidth - offset, 0);
+    const targetY = Math.max(window.innerHeight - offset, 0);
+
+    // Helper to dispatch a mousemove on the document/body (the library listens on element)
+    function dispatchMouseMove(x, y) {
+      const ev = new MouseEvent("mousemove", {
+        bubbles: true,
+        cancelable: true,
+        clientX: x,
+        clientY: y
+      });
+      // dispatch on document.body so element listeners on body pick it up
+      (document.body || document).dispatchEvent(ev);
+    }
+
+    // Fire several events quickly so the dot moves faster (closer to instant)
+    dispatchMouseMove(targetX, targetY);
+    setTimeout(() => dispatchMouseMove(targetX, targetY), 16);
+    setTimeout(() => dispatchMouseMove(targetX, targetY), 50);
+    setTimeout(() => dispatchMouseMove(targetX, targetY), 120);
+
+    // Optional: on resize, reposition again to bottom-right
+    window.addEventListener("resize", () => {
+      const nx = Math.max(window.innerWidth - offset, 0);
+      const ny = Math.max(window.innerHeight - offset, 0);
+      dispatchMouseMove(nx, ny);
+    });
+  })
+  .catch(err => console.error("Cursor effect failed:", err));
+
+
+})();

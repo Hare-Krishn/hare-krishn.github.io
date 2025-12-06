@@ -11,6 +11,10 @@
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.b500concepts.com/services/" />
+ 
+  <!-- FAVICON & PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="../assets/img/logo-img/B500_logo-removebg-preview2.png" type="image/png" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
@@ -37,63 +41,11 @@
   <meta name="twitter:image" content="https://www.b500concepts.com/assets/img/og-services.jpg" />
 
   <!-- Structured Data -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "B500 Concepts",
-      "url": "https://www.b500concepts.com",
-      "logo": "https://www.b500concepts.com/assets/img/logo-img/B500_logo-removebg-preview2.png",
-      "sameAs": [
-        "https://www.facebook.com/b500concepts",
-        "https://www.instagram.com/b500concepts",
-        "https://www.linkedin.com/company/b500concepts",
-        "https://twitter.com/b500concepts"
-      ],
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+91-9953997777",
-          "contactType": "Customer Service",
-          "areaServed": "IN"
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "+91-1204025283",
-          "contactType": "Customer Service",
-          "areaServed": "IN"
-        }
-      ]
-    }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"B500 Concepts","url":"https://www.b500concepts.com","logo":"https://www.b500concepts.com/assets/img/logo-img/B500_logo-removebg-preview2.png","sameAs":["https://www.facebook.com/b500concepts","https://www.instagram.com/b500concepts","https://www.linkedin.com/company/b500concepts","https://twitter.com/b500concepts"],"contactPoint":[{"@type":"ContactPoint","telephone":"+91-9953997777","contactType":"Customer Service","areaServed":"IN"},{"@type":"ContactPoint","telephone":"+91-1204025283","contactType":"Customer Service","areaServed":"IN"}]}</script>
 </head>
 <body>
-  <!-- Page Header with Navigation -->
-  <header>
-    <nav class="navbar" role="navigation" aria-label="Main Navigation">
-      <div class="logo">
-        <img src="../assets/img/logo-img/B500_logo-removebg-preview2.png" alt="Logo" />
-        <div class="logo-text-group">
-          <span class="logo-text">B500 CONCEPTS</span>
-          <span class="logo-tagline">EVENTS | EXHIBITION | INTERIOR</span>
-        </div>
-      </div>
-      <div class="nav-links" id="navLinks">
-        <a href="../" aria-label="Home">Home</a>
-        <a href="../about/" aria-label="About B500 Concepts">About</a>
-        <a href="/" aria-label="Services">Services</a>
-        <a href="../contact/" aria-label="Contact">Contact</a>
-      </div>
-      <div class="hamburger" aria-label="Menu Toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Spacer to avoid content being hidden behind the fixed navbar -->
-  <div style="height: 70px;"></div>
+  <!-- HEADER / NAVIGATION SECTION -->
+  <site-header></site-header>
 
   <!-- Services Hero Section -->
   <section class="services-hero animate-on-scroll">
@@ -260,10 +212,7 @@
     </div>
   </section>
 
-  <!-- ==================== -->
   <!-- SERVICE PROCESS, INDUSTRIES, CTA, FOOTER AND SCRIPT SECTIONS -->
-  <!-- (KEEPING ALL ORIGINAL CONTENT INTACT) -->
-  <!-- Add all remaining sections exactly as in your original HTML -->
   <section class="service-process animate-on-scroll">
     <div class="container">
       <h2>How We Work</h2>
@@ -318,23 +267,12 @@
     </div>
   </section>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-brand"><h2>B500 CONCEPTS</h2><p>Crafting elegant designing experiences.</p></div>
-      <div class="footer-links"><h3>Quick Links</h3><ul><li><a href="../">Home</a></li><li><a href="../about/">About</a></li><li><a href="../contact/">Contact</a></li></ul></div>
-      <div class="footer-contact"><h3>Contact</h3><p>Email: <a href="mailto:contact@b500concepts.com">contact@b500concepts.com</a></p><p>Phone: <a href="tel:+919953997777">+91 9953997777</a></p><p><a href="tel:+91 120 4025283">+91 120 4025283</a></p></div>
-      <div class="footer-social"><h3>Follow Us</h3><div class="social-icons"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div>
-    </div>
-    <div class="footer-bottom"><p>Copyright &copy; 2018&ndash;2025 B500 Concepts. All rights reserved.</p></div>
-  </footer>
+  <!-- FOOTER -->
+  <site-footer></site-footer>
 
   <!-- JavaScript Files -->
   <script src="../assets/js/script.js"></script>
   <script src="services.js"></script>
-  <script type="module">
-    import { followingDotCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
-    new followingDotCursor({ color: "#8cbc46" });
-  </script>
+  <script src="/components/components.js"></script>
 </body>
 </html>

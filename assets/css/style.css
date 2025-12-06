@@ -23,44 +23,6 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 .container { margin: 0 auto; padding: 0 20px; }
 
-/* Scroll Circle Indicator */
-#scroll-indicator-container {
-  position: fixed;
-  bottom: 20px;
-  left: 90%;
-  transform: translateX(-50%);
-  z-index: 9999;
-  width: 40px;
-  height: 40px;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-#scroll-indicator-container.fade-out {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-#scroll-indicator {
-  width: 100%;
-  height: 100%;
-  transform: rotate(-90deg);
-}
-
-#scroll-indicator .bg {
-  fill: none;
-  stroke: #ddd;
-  stroke-width: 4;
-}
-
-#scroll-indicator .progress {
-  fill: none;
-  stroke: #8cbc46;
-  stroke-width: 4;
-  stroke-linecap: round;
-  transition: stroke-dasharray 0.2s ease;
-}
 
 
 /*Navigation Bar*/
@@ -86,10 +48,7 @@ img { max-width: 100%; display: block; }
 }
 
 .logo img {
-  /* padding-top: 10px; */
-  /* width: 150px; */
   height: 50px;
-  /* border-radius: 50%; */
   object-fit: cover;
   margin-right: 10px;
 }
@@ -175,6 +134,10 @@ img { max-width: 100%; display: block; }
     box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease;
     z-index: 15;
+
+    /* 🔥 REQUIRED UPDATE FOR SCROLLING */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav-links.show {
@@ -195,7 +158,6 @@ img { max-width: 100%; display: block; }
     right: 15px;
   }
 }
-
 
 
 /* FOOTER */
