@@ -3,8 +3,8 @@ const URLS_TO_CACHE = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/assets/img/logo-img/B500_logo-removebg-preview2.png',
-  '/assets/img/logo-img/B500_logo-removebg-preview2.png',
+  '/logo/192x192.png',
+  '/logo/512x512.png',
   // Add more files you want cached
 ];
 
